@@ -1,7 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
+import { RefObject } from "react";
 
-const Navbar = () => {
+const Navbar = ({contactScroll}: {contactScroll: RefObject<HTMLDivElement>}) => {
+    const scrollToContact = () => {
+        if (contactScroll.current){
+            contactScroll.current.scrollIntoView({ behavior: 'smooth' })
+        }
+    }
+
   return (
     <div className="flex flex-row justify-between items-center p-3 md:p-8">
       <Link href="/">
@@ -16,7 +23,8 @@ const Navbar = () => {
 
       <button
         type="button"
-        className="w-max items-center ml-auto flex-initial bg-transparent group border border-black inter text-xs uppercase tracking-widest hover:border-primary-900 text-black rounded-lg h-10 px-5 text-center inline-flex transition-all ease-in-out"
+        className="w-max hover:text-primary items-center ml-auto flex-initial bg-transparent group border border-black inter text-xs uppercase tracking-widest hover:border-primary-900 text-black rounded-lg h-10 px-5 text-center inline-flex transition-all ease-in-out"
+        onClick={()=>scrollToContact()}
       >
         <p>Contact</p>
         <svg
@@ -29,9 +37,9 @@ const Navbar = () => {
           <path
             stroke="#205264"
             className="group-hover:stroke-primary-900"
-            stroke-linecap="round"
+            strokeLinecap="round"
             strokeLinejoin="round"
-            stroke-width="1"
+            strokeWidth="1"
             d="M1 5h12m0 0L9 1m4 4L9 9"
           />
         </svg>

@@ -1,6 +1,8 @@
 import Image from "next/image";
 
+
 const EntryPage = () => {
+
   return (
     <div className="flex flex-col md:flex-row w-full h-full p-14 items-center justify-center md:space-x-10">
       <div className="flex flex-col text-center md:text-left text-stone-800 pb-8 md:pb-0">
@@ -17,7 +19,7 @@ const EntryPage = () => {
         height={5000}
         width={5000}
         alt="Home Ipad Pics"
-        className="w-full max-h-72 md:max-h-96 2xl:max-h-none object-contain max-w-xl md:max-w-2xl"
+        className="w-full max-h-72 md:max-h-96 2xl:max-h-none object-contain max-w-xl md:max-w-2xl hover:scale-110 transition-all ease-in-out duration-700"
       />
     </div>
   );
