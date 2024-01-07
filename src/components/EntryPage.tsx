@@ -14,8 +14,9 @@ const EntryPage = () => {
                     {/* <img src="/images/ipad-hero.png" className="w-full max-h-80 2xl:max-h-none object-contain max-w-2xl hover:scale-110 transition-all ease-in-out duration-300" alt="" /> */}
                     <Image
                       src="/images/marvel-ipad.png"
-                      width={1306} // 1306
-                      height={945} // 945
+                      width={0} // 1306
+                      height={0} // 945
+                      sizes="100vw"
                       className="w-full max-h-80 2xl:max-h-none object-contain max-w-lg hover:scale-110 transition-all ease-in-out duration-300"
                       alt=""
                     />

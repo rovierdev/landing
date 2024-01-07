@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import EntryPage from "@/components/EntryPage";
 import { useRef } from "react";
 import Tagline from "@/components/Tagline";
+import Feature from "@/components/Feature";
 
 export default function Home() {
   const home = useRef(null);
@@ -21,13 +22,23 @@ export default function Home() {
         <div className="h-[4.8rem] md:h-[5.5rem]" />
         <EntryPage />
       </div>
-      <div className="bg-secondary px-6 md:px-28 mb-12 2xl:flex justify-center items-center mt-10 md:mt-0 scroll-m-[5.5rem]">
+      <div ref={features} className="bg-secondary px-6 md:px-28 mb-12 2xl:flex justify-center items-center mt-10 md:mt-0 scroll-m-[5.5rem]">
         <Tagline section={1}/>
       </div>
-      <div ref={features} className="flex bg-white min-h-screen"></div>
-      <div ref={benefits} className="flex bg-secondary min-h-96"></div>
-      <div ref={about} className="flex bg-white min-h-screen"></div>
-      <div ref={contact} className="flex bg-secondary min-h-96"></div>
+      <div className="flex bg-white 2xl:flex justify-center items-center flex-col">
+        <Feature num={1}/>
+        <Feature num={2}/>
+        <Feature num={3}/>
+      </div>
+
+      <div ref={benefits} className="bg-secondary px-6 md:px-28 mb-12 2xl:flex justify-center items-center mt-10 md:mt-0 scroll-m-[5.5rem]">
+        <Tagline section={2}/>
+      </div>
+      <div className="flex bg-white min-h-screen"></div>
+
+      <div ref={about} className="bg-secondary px-6 md:px-28 mb-12 2xl:flex justify-center items-center mt-10 md:mt-0 scroll-m-[5.5rem]">
+        <Tagline section={3}/>
+      </div>
     </main>
   );
 }
