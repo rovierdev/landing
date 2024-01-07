@@ -4,23 +4,24 @@ import Image from "next/image";
 const EntryPage = () => {
 
   return (
-    <div className="flex flex-col md:flex-row w-full h-full p-14 items-center justify-center md:space-x-10">
-      <div className="flex flex-col text-center md:text-left text-stone-800 pb-8 md:pb-0">
-        <h1 className="inter font-bold text-4xl md:text-5xl tracking-tight">
-          Click and Optimize!
-        </h1>
-        <h1 className="inter pt-4 text-xl md:text-2xl font-light">
-          Revolutionizing Foodservice Procurement
-        </h1>
-      </div>
-
-      <Image
-        src="/images/ipad.png"
-        height={5000}
-        width={5000}
-        alt="Home Ipad Pics"
-        className="w-full max-h-72 md:max-h-96 2xl:max-h-none object-contain max-w-xl md:max-w-2xl hover:scale-110 transition-all ease-in-out duration-700"
-      />
+    <div className="px-10 flex justify-center items-center">
+      <div className="md:mt-36 px-0 md:px-10 mx-auto justify-center items-center grid grid-rows-2 gap-y-8 grid-cols-none md:grid-cols-7 md:grid-rows-none md:gap-x-6 md:gap-y-0">
+                <div className="md:col-span-3 text-center justify-center items-center md:text-left md:justify-normal">
+                    <h1 className="font-bold text-4xl sm:text-5xl text-stone-700 tracking-tight">Click & Optimize</h1>
+                    <h1 className="pt-5 text-xl sm:text-2xl text-stone-700 font-light">Revolutionizing Foodservice Procurement</h1>
+                </div>
+                <div className="md:col-span-4 flex justify-center items-center">
+                    {/* <img src="/images/ipad-hero.png" className="w-full max-h-80 2xl:max-h-none object-contain max-w-2xl hover:scale-110 transition-all ease-in-out duration-300" alt="" /> */}
+                    <Image
+                      src="/images/marvel-ipad.png"
+                      width={1306} // 1306
+                      height={945} // 945
+                      className="w-full max-h-80 2xl:max-h-none object-contain max-w-lg hover:scale-110 transition-all ease-in-out duration-300"
+                      alt=""
+                    />
+                </div>
+                
+            </div>
     </div>
   );
 };

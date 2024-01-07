@@ -12,19 +12,21 @@ const Navbar = ({refs}: {refs:{[key in NavLinksKey] : RefObject<HTMLDivElement>}
     }
 
   return (
-    <header className="px-10 py-6 fixed w-full top-0 z-10 flex justify-center md:justify-between align-middle items-center bg-[#fbfcfd]">
+    <header className="flex fixed w-full justify-center md:justify-between align-middle items-center bg-white px-10 py-6 z-10"> 
+    {/* bg-[#fbfcfd] */}
       <a onClick={()=>scroll('home')}>
         <div className="mx-auto md:mx-0 hover:cursor-pointer">
           <Image 
             src="/images/rovier1.png"
-            width={100}
-            height={100}
+            width={0}
+            height={0}
             alt="Logo"
-            className="h-7 w-36 md:h-8"
+            sizes="100vw"
+            className="h-7 w-36"
           />
         </div>
       </a>
-      <div className="hidden md:flex space-x-10 items-center inter text-xs uppercase tracking-widest">
+      <div className="hidden md:flex items-center inter space-x-10  text-xs uppercase tracking-widest">
           <a onClick={()=>scroll('features')} className="group transition duration-300 hover:cursor-pointer">Features <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-[1px] bg-black"></span></a>
           <a onClick={()=>scroll('benefits')} className="group transition duration-300 hover:cursor-pointer">Benefits <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-[1px] bg-black"></span></a>
           <a onClick={()=>scroll('about')} className="group transition duration-300 hover:cursor-pointer">About <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-[1px] bg-black"></span></a>
