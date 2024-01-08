@@ -38,10 +38,9 @@ const Feature = ({num}: {num: number}) => {
     }, [num])
     
     return (
-        <div className="py-10 px-6 md:px-28 flex flex-col lg:flex-row 2xl:w-2/3">
+        <div className="py-10 px-6 md:px-28 flex flex-col lg:flex-row 2xl:w-2/3 justify-between">
             {num % 2 === 0 && 
                 <div className="pt-5 lg:pt-0 basis-1/2 flex-initial">
-                    {/* <img src="groceries.jpeg" alt="" className="max-w-lg w-full rounded-lg shadow-lg" /> */}
                     <Image
                         src={data.imgURL}
                         width={0}
@@ -52,14 +51,13 @@ const Feature = ({num}: {num: number}) => {
                     />
                 </div>
             }
-            <div className="lg:mr-32 basis-1/2 my-auto">
+            <div className={`${num % 2 === 0 ? 'lg:ml-32' : 'lg:mr-32'} basis-1/2 my-auto`}>
                 <h1 className="uppercase text-xs pb-3 text-primary sometype font-bold tracking-widest">{data.topText}</h1>
                 <h1 className="anybody text-4xl md:text-5xl pb-6 ">{data.title}</h1>
                 <h1 className="inter text-lg">{data.description}</h1>
             </div>
             {num % 2 === 1 && 
                 <div className="pt-5 lg:pt-0 basis-1/2 flex-initial">
-                    {/* <img src="groceries.jpeg" alt="" className="max-w-lg w-full rounded-lg shadow-lg" /> */}
                     <Image
                         src={data.imgURL}
                         width={0}

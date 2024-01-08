@@ -6,6 +6,8 @@ import EntryPage from "@/components/EntryPage";
 import { useRef } from "react";
 import Tagline from "@/components/Tagline";
 import Feature from "@/components/Feature";
+import Benefits from "@/components/Benefits";
+import About from "@/components/About";
 
 export default function Home() {
   const home = useRef(null);
@@ -22,7 +24,7 @@ export default function Home() {
         <div className="h-[4.8rem] md:h-[5.5rem]" />
         <EntryPage />
       </div>
-      <div ref={features} className="bg-secondary px-6 md:px-28 mb-12 2xl:flex justify-center items-center mt-10 md:mt-0 scroll-m-[5.5rem]">
+      <div ref={features} className="bg-secondary px-6 md:px-28 2xl:flex justify-center items-center mt-10 md:mt-0 scroll-m-[5.5rem]">
         <Tagline section={1}/>
       </div>
       <div className="flex bg-white 2xl:flex justify-center items-center flex-col">
@@ -31,14 +33,19 @@ export default function Home() {
         <Feature num={3}/>
       </div>
 
-      <div ref={benefits} className="bg-secondary px-6 md:px-28 mb-12 2xl:flex justify-center items-center mt-10 md:mt-0 scroll-m-[5.5rem]">
+      <div ref={benefits} className="bg-secondary px-6 md:px-28 2xl:flex justify-center items-center mt-10 md:mt-0 scroll-m-[5.5rem]">
         <Tagline section={2}/>
       </div>
-      <div className="flex bg-white min-h-screen"></div>
+      <div className="flex flex-col bg-white min-h-screen">
+        <Benefits isSupplier={false}/>
+        <Benefits isSupplier={true}/>
+      </div>
 
-      <div ref={about} className="bg-secondary px-6 md:px-28 mb-12 2xl:flex justify-center items-center mt-10 md:mt-0 scroll-m-[5.5rem]">
+      <div ref={about} className="bg-secondary px-6 md:px-28 2xl:flex justify-center items-center mt-10 md:mt-0 scroll-m-[5.5rem]">
         <Tagline section={3}/>
       </div>
+
+      <About contactRef={contact} />
     </main>
   );
 }
