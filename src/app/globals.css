@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: Clash;
+  src: url('/fonts/ClashDisplay-Variable.ttf') format("truetype-variations");
+}
+
+@font-face {
+  font-family: Nanum Myeongjo;
+  src: url('/fonts/public/fonts/NanumMyeongjo-Regular.ttf') format("truetype-variations");
+}
+
+.nanum {
+  font-family: Nanum Myeongjo, serif !important;
+}
+
+.anybody {
+  font-family: Clash, sans-serif !important;
+}
+
 /* @layer base{
   :root {
     --foreground-rgb: 0, 0, 0;

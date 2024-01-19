@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Script from "next/script";
 import { RefObject } from "react";
 
 
@@ -16,7 +17,7 @@ const About = ({contactRef}: {contactRef: RefObject<HTMLDivElement>}) => {
                 <h1 className="text-lg pt-8 font-light tracking-wide">Rovier is the worldwide leader in efficient electronic procurement using mathematical optimization. Rovier’s Click and Optimize technology combines the power of state-of-the-art mathematical optimization, advanced data analytics, and smart mobile technology. Our team consists of worldwide leaders in the fields of information technology, mathematical optimization, and hotel/restaurant management. Our pioneering work in mathematical optimization has won the INFORMS Computing Society Prize and the Beale-Orchard-Hays Prize, two of the most prestigious international awards.</h1>
             </div>
             <div ref={contactRef} className="basis-1/2 shadow-lg rounded-lg mt-10 md:pt-0">
-                <div className="bg-primary min-w-full min-h-full"></div>
+                <div data-tf-live={process.env.TYPEFORM_EMBED}></div><Script src="//embed.typeform.com/next/embed.js"></Script>
             </div>
         </div>
     )

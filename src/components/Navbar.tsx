@@ -12,7 +12,7 @@ const Navbar = ({refs}: {refs:{[key in NavLinksKey] : RefObject<HTMLDivElement>}
     }
 
   return (
-    <header className="flex fixed w-full justify-center md:justify-between align-middle items-center bg-white px-10 py-6 z-10"> 
+    <header className="flex fixed w-full justify-center md:justify-between align-middle items-center bg-secondary-100 px-10 py-6 z-10"> 
     {/* bg-[#fbfcfd] */}
       <a onClick={()=>scroll('home')}>
         <div className="mx-auto md:mx-0 hover:cursor-pointer">
@@ -34,7 +34,7 @@ const Navbar = ({refs}: {refs:{[key in NavLinksKey] : RefObject<HTMLDivElement>}
             <button type="button" className=" w-max items-center hover:cursor-pointer ml-auto flex-initial bg-transparent group border border-black inter text-xs uppercase tracking-widest hover:border-[#EA4026] hover:text-[#EA4026] text-black rounded-lg h-10 px-5 text-center inline-flex transition-all ease-in-out">
               <p>Contact</p>
               <svg className="group-hover:translate-x-1.5 transition-all ease-in-out rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-              <path stroke="#000000" className="group-hover:stroke-[#EA4026]" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              <path stroke="#000000" className="group-hover:stroke-primary" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M1 5h12m0 0L9 1m4 4L9 9"/>
               </svg>
             </button>
           </a>
