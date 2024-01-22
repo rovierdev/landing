@@ -7,6 +7,7 @@
   src: url('/fonts/ClashDisplay-Variable.ttf') format("truetype-variations");
 }
 
+
 @font-face {
   font-family: Nanum Myeongjo;
   src: url('/fonts/public/fonts/NanumMyeongjo-Regular.ttf') format("truetype-variations");
